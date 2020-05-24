@@ -4,6 +4,7 @@ use App\Startup;
 use Klein\Klein;
 
 require_once "../vendor/autoload.php";
+ini_set('display_errors','Off');
 
 class CallMethodOfClass {
     static public function Call() {

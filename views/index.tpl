@@ -1,7 +1,11 @@
+<link rel="stylesheet" href="../index.css" media="all" />
+
 <form action="/books"  method="POST">
-    <input type="text" name="name" placeholder="Название...">
-    <input type="text" name="author" placeholder="Автор...">
-    <button>Добавить</button>
+    <div class="form-div">
+        <input class="flex-item" type="text" name="name" placeholder="Название...">
+        <input class="flex-item" type="text" name="author" placeholder="Автор...">
+        <button class="flex-item">Добавить</button>
+    </div>
 </form>
 
 <ul>
