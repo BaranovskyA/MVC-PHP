@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.36, created on 2020-05-20 18:02:08
+/* Smarty version 3.1.36, created on 2020-05-20 18:28:02
   from 'W:\domains\mvc.loc\views\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.36',
-  'unifunc' => 'content_5ec54670d30990_04414738',
+  'unifunc' => 'content_5ec54c82e270d5_21121945',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd46cd257cd6a4368da53f4531401b50705329062' => 
     array (
       0 => 'W:\\domains\\mvc.loc\\views\\index.tpl',
-      1 => 1589986927,
+      1 => 1589988479,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ec54670d30990_04414738 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5ec54c82e270d5_21121945 (Smarty_Internal_Template $_smarty_tpl) {
 ?><form action="/books"  method="POST">
     <input type="text" name="name" placeholder="Название...">
     <input type="text" name="author" placeholder="Автор...">
-    <button>Создать</button>
+    <button>Добавить</button>
 </form>
 
 <ul>
@@ -34,9 +34,15 @@ $_smarty_tpl->tpl_vars['book']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['book']->value) {
 $_smarty_tpl->tpl_vars['book']->do_else = false;
 ?>
-        <li><?php echo $_smarty_tpl->tpl_vars['book']->value->author;?>
+        <li>
+            <?php echo $_smarty_tpl->tpl_vars['book']->value->author;?>
 , "<?php echo $_smarty_tpl->tpl_vars['book']->value->name;?>
-"</li>
+"
+            <form action="/books/delete/<?php echo $_smarty_tpl->tpl_vars['book']->value->id;?>
+" method="POST">
+                <button>Удалить</button>
+            </form>
+        </li>
     <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>

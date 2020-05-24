@@ -33,4 +33,8 @@ final class RouterProvider extends Singleton implements IProvider
     static function request() {
         return self::$router->request();
     }
+
+    static function response() {
+        return self::$router->response();
+    }
 }

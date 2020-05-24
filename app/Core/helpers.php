@@ -65,3 +65,7 @@ function view(string $template, array $variables = []) {
 
     return $engine->fetch($template . config('views.extension', '.tpl'));
 }
+
+function response() {
+    return RouterProvider::response();
+}

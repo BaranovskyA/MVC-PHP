@@ -6,6 +6,11 @@
 
 <ul>
     {foreach $books as $book}
-        <li>{$book->author}, "{$book->name}"</li>
+        <li>
+            {$book->author}, "{$book->name}"
+            <form action="/books/delete/{$book->id}" method="POST">
+                <button>Удалить</button>
+            </form>
+        </li>
     {/foreach}
 </ul>
