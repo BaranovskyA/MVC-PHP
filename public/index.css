@@ -1,0 +1,22 @@
+.form-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 10%;
+    border: 1px solid rgb(125, 99, 49);
+    padding: 1%;
+    border-radius: 15px;
+    margin: 0 auto;
+    background-color: gray;
+}
+
+.flex-item {
+    margin: 5px;
+}
+
+button {
+	background-color: green;
+	color: white;
+}
